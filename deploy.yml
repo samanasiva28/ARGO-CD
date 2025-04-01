@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-   name: replica-1
+  name: replica-1
 spec:
   replicas: 3
   selector:
-     MatchLabels:
-        project: swiggy
+    matchLabels:       # Corrected from "MatchLabels" (must be lowercase)
+      project: swiggy
   template:
-    matadata:
-       labels:
-         project: swiggy
-  spec:
-    containers:
-       - name: cont-1
-         image: shaikmustafa/cycle
-         ports:
-           - containerPort: 80
+    metadata:          # Corrected from "matadata" (spelling error)
+      labels:
+        project: swiggy
+    spec:
+      containers:
+        - name: cont-1
+          image: shaikmustafa/cycle
+          ports:
+            - containerPort: 80
+
  
