@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: replica-1
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:       # Corrected from "MatchLabels" (must be lowercase)
       project: swiggy
